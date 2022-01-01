@@ -1,0 +1,10 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+mac -> DNS: implicated.cc:80
+mac -> ali: 8.131.55.209:80
+
+DNS -> ali: 8.131.55.209:80
+ali -> nginx: 127.0.0.1:8888
+@enduml

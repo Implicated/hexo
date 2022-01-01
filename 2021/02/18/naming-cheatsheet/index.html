@@ -1,0 +1,1276 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="变量命名规范, Implicated">
+    <meta name="description" content="Implicated">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>变量命名规范 | Implicated</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Implicated</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/fe">
+          
+          <i class="fab fa-node-js" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>前端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/be">
+          
+          <i class="fab fa-java" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>后端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/database">
+          
+          <i class="fas fa-database" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>数据库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/ops">
+          
+          <i class="fab fa-linux" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>运维</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/apple">
+          
+          <i class="fas fa-apple" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>苹果</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/tool">
+          
+          <i class="fas fa-tools" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>工具</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/plan" class="waves-effect waves-light">
+      
+      <i class="fas fa-plane" style="zoom: 0.6;"></i>
+      
+      <span>计划</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Implicated</div>
+        <div class="logo-desc">
+            
+            Implicated
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/fe " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-node-js" style="position: absolute;left:50px" ></i>
+			      
+		          <span>前端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/be " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-java" style="position: absolute;left:50px" ></i>
+			      
+		          <span>后端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/database " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-database" style="position: absolute;left:50px" ></i>
+			      
+		          <span>数据库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/ops " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-linux" style="position: absolute;left:50px" ></i>
+			      
+		          <span>运维</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/apple " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-apple" style="position: absolute;left:50px" ></i>
+			      
+		          <span>苹果</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/tool " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tools" style="position: absolute;left:50px" ></i>
+			      
+		          <span>工具</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/plan" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-plane"></i>
+			
+			计划
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">变量命名规范</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/be/" class="post-category">
+                                be
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-18
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-18
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+<!--        <div>-->
+<!--            <p>-->
+<!--                本文最后更新于 &lt;span id=&#34;expire-date&#34;&gt;&lt;/span&gt; 天前，文中部分描述可能已经过时。-->
+<!--            </p>-->
+<!--        </div>-->
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>8个规范</p>
+<a id="more"></a>
+
+<hr>
+<ul>
+<li><a href="#english-language">使用英语</a></li>
+<li><a href="#naming-convention">命名风格</a></li>
+<li><a href="#s-i-d">遵守SID原则</a></li>
+<li><a href="#avoid-contractions">避免过度的简写</a></li>
+<li><a href="#avoid-context-duplication">避免上下文重复</a></li>
+<li><a href="#reflect-the-expected-result">反映预期结果</a></li>
+<li><a href="#naming-functions">命名的模式</a></li>
+<li><a href="#singular-and-plurals">单复数</a></li>
+</ul>
+<p><img src="/images/naming-cheatsheet.png"></p>
+<p>Naming things is hard. This sheet attempts to make it easier.</p>
+<p>Although these suggestions can be applied to any programming language, I will use JavaScript to illustrate them in practice.</p>
+<h2 id="English-language"><a href="#English-language" class="headerlink" title="English language"></a>English language</h2><p>Use English language when naming your variables and functions.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> primerNombre <span class="token operator">=</span> <span class="token string">'Gustavo'</span>
+<span class="token keyword">const</span> amigos <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Kate'</span><span class="token punctuation">,</span> <span class="token string">'John'</span><span class="token punctuation">]</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> firstName <span class="token operator">=</span> <span class="token string">'Gustavo'</span>
+<span class="token keyword">const</span> friends <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Kate'</span><span class="token punctuation">,</span> <span class="token string">'John'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>Like it or not, English is the dominant language in programming: the syntax of all programming languages is written in English, as well as countless documentations and educational materials. By writing your code in English you dramatically increase its cohesiveness.</p>
+</blockquote>
+<h2 id="Naming-convention"><a href="#Naming-convention" class="headerlink" title="Naming convention"></a>Naming convention</h2><p>Pick <strong>one</strong> naming convention and follow it. It may be <code>camelCase</code>, <code>PascalCase</code>, <code>snake_case</code>, or anything else, as long as it remains consistent. Many programming languages have their own traditions regarding naming conventions; check the documentation for your language or study some popular repositories on Github!</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> page_count <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">const</span> shouldUpdate <span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> pageCount <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">const</span> shouldUpdate <span class="token operator">=</span> <span class="token boolean">true</span>
+
+<span class="token comment">/* Good as well */</span>
+<span class="token keyword">const</span> page_count <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">const</span> should_update <span class="token operator">=</span> <span class="token boolean">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="S-I-D"><a href="#S-I-D" class="headerlink" title="S-I-D"></a>S-I-D</h2><p>A name must be <em>short</em>, <em>intuitive</em> and <em>descriptive</em>:</p>
+<ul>
+<li><strong>Short</strong>. A name must not take long to type and, therefore, remember;</li>
+<li><strong>Intuitive</strong>. A name must read naturally, as close to the common speech as possible;</li>
+<li><strong>Descriptive</strong>. A name must reflect what it does/possesses in the most efficient way.</li>
+</ul>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">5</span> <span class="token comment">// "a" could mean anything</span>
+<span class="token keyword">const</span> isPaginatable <span class="token operator">=</span> a <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token comment">// "Paginatable" sounds extremely unnatural</span>
+<span class="token keyword">const</span> shouldPaginatize <span class="token operator">=</span> a <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token comment">// Made up verbs are so much fun!</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> postCount <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">const</span> hasPagination <span class="token operator">=</span> postCount <span class="token operator">&gt;</span> <span class="token number">10</span>
+<span class="token keyword">const</span> shouldPaginate <span class="token operator">=</span> postCount <span class="token operator">&gt;</span> <span class="token number">10</span> <span class="token comment">// alternatively</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Avoid-contractions"><a href="#Avoid-contractions" class="headerlink" title="Avoid contractions"></a>Avoid contractions</h2><p>Do <strong>not</strong> use contractions. They contribute to nothing but decreased readability of the code. Finding a short, descriptive name may be hard, but contraction is not an excuse for not doing so.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">onItmClk</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">onItemClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Avoid-context-duplication"><a href="#Avoid-context-duplication" class="headerlink" title="Avoid context duplication"></a>Avoid context duplication</h2><p>A name should not duplicate the context in which it is defined. Always remove the context from a name if that doesn’t decrease its readability.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">class</span> <span class="token class-name">MenuItem</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* Method name duplicates the context (which is "MenuItem") */</span>
+  <span class="token function-variable function">handleMenuItemClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+
+  <span class="token comment">/* Reads nicely as `MenuItem.handleClick()` */</span>
+  <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Reflect-the-expected-result"><a href="#Reflect-the-expected-result" class="headerlink" title="Reflect the expected result"></a>Reflect the expected result</h2><p>A name should reflect the expected result.</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> isEnabled <span class="token operator">=</span> itemCount <span class="token operator">&gt;</span> <span class="token number">3</span>
+<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">disabled</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token operator">!</span>isEnabled<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> isDisabled <span class="token operator">=</span> itemCount <span class="token operator">&lt;=</span> <span class="token number">3</span>
+<span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">disabled</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>isDisabled<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="Naming-functions"><a href="#Naming-functions" class="headerlink" title="Naming functions"></a>Naming functions</h1><h2 id="A-HC-LC-Pattern"><a href="#A-HC-LC-Pattern" class="headerlink" title="A/HC/LC Pattern"></a>A/HC/LC Pattern</h2><p>There is a useful pattern to follow when naming functions:</p>
+<pre class="line-numbers language-none"><code class="language-none">prefix? + action (A) + high context (HC) + low context? (LC)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Take a look at how this pattern may be applied in the table below.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Prefix</th>
+<th align="left">Action (A)</th>
+<th align="left">High context (HC)</th>
+<th align="left">Low context (LC)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>getUser</code></td>
+<td align="left"></td>
+<td align="left"><code>get</code></td>
+<td align="left"><code>User</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>getUserMessages</code></td>
+<td align="left"></td>
+<td align="left"><code>get</code></td>
+<td align="left"><code>User</code></td>
+<td align="left"><code>Messages</code></td>
+</tr>
+<tr>
+<td align="left"><code>handleClickOutside</code></td>
+<td align="left"></td>
+<td align="left"><code>handle</code></td>
+<td align="left"><code>Click</code></td>
+<td align="left"><code>Outside</code></td>
+</tr>
+<tr>
+<td align="left"><code>shouldDisplayMessage</code></td>
+<td align="left"><code>should</code></td>
+<td align="left"><code>Display</code></td>
+<td align="left"><code>Message</code></td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Note:</strong> The order of context affects the meaning of a variable. For example, <code>shouldUpdateComponent</code> means <em>you</em> are about to update a component, while <code>shouldComponentUpdate</code> tells you that <em>component</em> will update on itself, and you are but controlling when it should be updated.<br>In other words, <strong>high context emphasizes the meaning of a variable</strong>.</p>
+</blockquote>
+<hr>
+<h2 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h2><p>The verb part of your function name. The most important part responsible for describing what the function <em>does</em>.</p>
+<h3 id="get"><a href="#get" class="headerlink" title="get"></a><code>get</code></h3><p>Accesses data immediately (i.e. shorthand getter of internal data).</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">getFruitCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>fruits<span class="token punctuation">.</span>length
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>See also<br><a href="#compose">compose</a>.</p>
+</blockquote>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a><code>set</code></h3><p>Sets a variable in a declarative way, with value <code>A</code> to value <code>B</code>.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> fruits <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">function</span> <span class="token function">setFruits</span><span class="token punctuation">(</span><span class="token parameter">nextFruits</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fruits <span class="token operator">=</span> nextFruits
+<span class="token punctuation">}</span>
+
+<span class="token function">setFruits</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span> <span class="token comment">// 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="reset"><a href="#reset" class="headerlink" title="reset"></a><code>reset</code></h3><p>Sets a variable back to its initial value or state.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> initialFruits <span class="token operator">=</span> <span class="token number">5</span>
+<span class="token keyword">let</span> fruits <span class="token operator">=</span> initialFruits
+<span class="token function">setFruits</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span> <span class="token comment">// 10</span>
+
+<span class="token keyword">function</span> <span class="token function">resetFruits</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  fruits <span class="token operator">=</span> initialFruits
+<span class="token punctuation">}</span>
+
+<span class="token function">resetFruits</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span> <span class="token comment">// 5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a><code>fetch</code></h3><p>Request for some data, which takes some indeterminate time (i.e. async request).</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">fetchPosts</span><span class="token punctuation">(</span><span class="token parameter">postCount</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'https://api.dev/posts'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token operator">...</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a><code>remove</code></h3><p>Removes something <em>from</em> somewhere.</p>
+<p>For example, if you have a collection of selected filters on a search page, removing one of them from the collection is <code>removeFilter</code>, <strong>not</strong> <code>deleteFilter</code> (and this is how you would naturally say it in English as well):</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">removeFilter</span><span class="token punctuation">(</span><span class="token parameter">filterName<span class="token punctuation">,</span> filters</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> filters<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> name <span class="token operator">!==</span> filterName<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> selectedFilters <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'price'</span><span class="token punctuation">,</span> <span class="token string">'availability'</span><span class="token punctuation">,</span> <span class="token string">'size'</span><span class="token punctuation">]</span>
+<span class="token function">removeFilter</span><span class="token punctuation">(</span><span class="token string">'price'</span><span class="token punctuation">,</span> selectedFilters<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>See also<br><a href="#delete">delete</a>.</p>
+</blockquote>
+<h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a><code>delete</code></h3><p>Completely erases something from the realms of existence.</p>
+<p>Imagine you are a content editor, and there is that notorious post you wish to get rid of. Once you clicked a shiny “Delete post” button, the CMS performed a <code>deletePost</code> action, <strong>not</strong> <code>removePost</code>.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">deletePost</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> database<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">{</span> id <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>See also<br><a href="#remove">remove</a>.</p>
+</blockquote>
+<h3 id="compose"><a href="#compose" class="headerlink" title="compose"></a><code>compose</code></h3><p>Creates new data from the existing one. Mostly applicable to strings, objects, or functions.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">composePageUrl</span><span class="token punctuation">(</span><span class="token parameter">pageName<span class="token punctuation">,</span> pageId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>pageName<span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> pageId<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>See also<br><a href="#get">get</a>.</p>
+</blockquote>
+<h3 id="handle"><a href="#handle" class="headerlink" title="handle"></a><code>handle</code></h3><p>Handles an action. Often used when naming a callback method.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">handleLinkClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Clicked a link!'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+link<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> handleLinkClick<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h2><p>A domain that a function operates on.</p>
+<p>A function is often an action on <em>something</em>. It is important to state what is its operable domain, or at least an expected data type.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* A pure function operating with primitives */</span>
+<span class="token keyword">function</span> <span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">predicate<span class="token punctuation">,</span> list</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> list<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>predicate<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/* Function operating exactly on posts */</span>
+<span class="token keyword">function</span> <span class="token function">getRecentPosts</span><span class="token punctuation">(</span><span class="token parameter">posts</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">filter</span><span class="token punctuation">(</span>posts<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> post<span class="token punctuation">.</span>date <span class="token operator">===</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>Some language-specific assumptions may allow omitting the context. For example, in JavaScript, it’s common that <code>filter</code> operates on Array. Adding explicit <code>filterArray</code> would be unnecessary.</p>
+</blockquote>
+<p>–</p>
+<h2 id="Prefixes"><a href="#Prefixes" class="headerlink" title="Prefixes"></a>Prefixes</h2><p>Prefix enhances the meaning of a variable. It is rarely used in function names.</p>
+<h3 id="is"><a href="#is" class="headerlink" title="is"></a><code>is</code></h3><p>Describes a characteristic or state of the current context (usually <code>boolean</code>).</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">const</span> color <span class="token operator">=</span> <span class="token string">'blue'</span>
+<span class="token keyword">const</span> isBlue <span class="token operator">=</span> color <span class="token operator">===</span> <span class="token string">'blue'</span> <span class="token comment">// characteristic</span>
+<span class="token keyword">const</span> isPresent <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token comment">// state</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>isBlue <span class="token operator">&amp;&amp;</span> isPresent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Blue is present!'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="has"><a href="#has" class="headerlink" title="has"></a><code>has</code></h3><p>Describes whether the current context possesses a certain value or state (usually <code>boolean</code>).</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> isProductsExist <span class="token operator">=</span> productsCount <span class="token operator">&gt;</span> <span class="token number">0</span>
+<span class="token keyword">const</span> areProductsPresent <span class="token operator">=</span> productsCount <span class="token operator">&gt;</span> <span class="token number">0</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> hasProducts <span class="token operator">=</span> productsCount <span class="token operator">&gt;</span> <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="should"><a href="#should" class="headerlink" title="should"></a><code>should</code></h3><p>Reflects a positive conditional statement (usually <code>boolean</code>) coupled with a certain action.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shouldUpdateUrl</span><span class="token punctuation">(</span><span class="token parameter">url<span class="token punctuation">,</span> expectedUrl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> url <span class="token operator">!==</span> expectedUrl
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="min-max"><a href="#min-max" class="headerlink" title="min/max"></a><code>min</code>/<code>max</code></h3><p>Represents a minimum or maximum value. Used when describing boundaries or limits.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/**
+ * Renders a random amount of posts within
+ * the given min/max boundaries.
+ */</span>
+<span class="token keyword">function</span> <span class="token function">renderPosts</span><span class="token punctuation">(</span><span class="token parameter">posts<span class="token punctuation">,</span> minPosts<span class="token punctuation">,</span> maxPosts</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> posts<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">randomBetween</span><span class="token punctuation">(</span>minPosts<span class="token punctuation">,</span> maxPosts<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="prev-next"><a href="#prev-next" class="headerlink" title="prev/next"></a><code>prev</code>/<code>next</code></h3><p>Indicate the previous or the next state of a variable in the current context. Used when describing state transitions.</p>
+<pre class="line-numbers language-jsx" data-language="jsx"><code class="language-jsx"><span class="token keyword">function</span> <span class="token function">fetchPosts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> prevPosts <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>posts
+
+  <span class="token keyword">const</span> fetchedPosts <span class="token operator">=</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">'...'</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> nextPosts <span class="token operator">=</span> <span class="token function">concat</span><span class="token punctuation">(</span>prevPosts<span class="token punctuation">,</span> fetchedPosts<span class="token punctuation">)</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> posts<span class="token operator">:</span> nextPosts <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="Singular-and-Plurals"><a href="#Singular-and-Plurals" class="headerlink" title="Singular and Plurals"></a>Singular and Plurals</h2><p>Like a prefix, variable names can be made singular or plural depending on whether they hold a single value or multiple values.</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/* Bad */</span>
+<span class="token keyword">const</span> friends <span class="token operator">=</span> <span class="token string">'Bob'</span>
+<span class="token keyword">const</span> friend <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token string">'Tony'</span><span class="token punctuation">,</span> <span class="token string">'Tanya'</span><span class="token punctuation">]</span>
+
+<span class="token comment">/* Good */</span>
+<span class="token keyword">const</span> friend <span class="token operator">=</span> <span class="token string">'Bob'</span>
+<span class="token keyword">const</span> friends <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Bob'</span><span class="token punctuation">,</span> <span class="token string">'Tony'</span><span class="token punctuation">,</span> <span class="token string">'Tanya'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>参考: <a target="_blank" rel="noopener" href="https://github.com/kettanaito/naming-cheatsheet">https://github.com/kettanaito/naming-cheatsheet</a></p>
+</blockquote>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02/21/nvm/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="使用nvm管理NodeJs版本">
+                        
+                        <span class="card-title">使用nvm管理NodeJs版本</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            NodeJs版本管理
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-21
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/fe/" class="post-category">
+                                    fe
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/NodeJS/">
+                        <span class="chip bg-color">NodeJS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/10/git-mult-repo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="git一个项目设置多个远程仓库（push）">
+                        
+                        <span class="card-title">git一个项目设置多个远程仓库（push）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            三个方法
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/be/" class="post-category">
+                                    be
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!--<script>-->
+<!--    (() => {-->
+<!--        var update = Date.parse("2021-02-18"),-->
+<!--            date = new Date(),-->
+<!--            now = date.getTime(),-->
+<!--            expire = now - update,-->
+<!--            expire_days = Math.floor(expire/(24*3600*1000));-->
+<!--        if (expire_days >= 120) {-->
+<!--            document.querySelectorAll('#expire-date')[0].innerHTML = expire_days;-->
+<!--            document.querySelectorAll('#post-expired-notify')[0].style.display = 'block';-->
+<!--        }-->
+<!--    })();-->
+<!--</script>-->
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Implicated</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

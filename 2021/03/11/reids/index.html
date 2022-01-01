@@ -1,0 +1,1707 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="redis笔记, Implicated">
+    <meta name="description" content="Implicated">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>redis笔记 | Implicated</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Implicated</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/fe">
+          
+          <i class="fab fa-node-js" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>前端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/be">
+          
+          <i class="fab fa-java" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>后端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/database">
+          
+          <i class="fas fa-database" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>数据库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/ops">
+          
+          <i class="fab fa-linux" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>运维</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/apple">
+          
+          <i class="fas fa-apple" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>苹果</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/tool">
+          
+          <i class="fas fa-tools" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>工具</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/plan" class="waves-effect waves-light">
+      
+      <i class="fas fa-plane" style="zoom: 0.6;"></i>
+      
+      <span>计划</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Implicated</div>
+        <div class="logo-desc">
+            
+            Implicated
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/fe " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-node-js" style="position: absolute;left:50px" ></i>
+			      
+		          <span>前端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/be " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-java" style="position: absolute;left:50px" ></i>
+			      
+		          <span>后端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/database " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-database" style="position: absolute;left:50px" ></i>
+			      
+		          <span>数据库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/ops " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-linux" style="position: absolute;left:50px" ></i>
+			      
+		          <span>运维</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/apple " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-apple" style="position: absolute;left:50px" ></i>
+			      
+		          <span>苹果</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/tool " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tools" style="position: absolute;left:50px" ></i>
+			      
+		          <span>工具</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/plan" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-plane"></i>
+			
+			计划
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">redis笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Redis/">
+                                <span class="chip bg-color">Redis</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/database/" class="post-category">
+                                database
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-11
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-11
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+<!--        <div>-->
+<!--            <p>-->
+<!--                本文最后更新于 &lt;span id=&#34;expire-date&#34;&gt;&lt;/span&gt; 天前，文中部分描述可能已经过时。-->
+<!--            </p>-->
+<!--        </div>-->
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>Redis笔记</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><ul>
+<li>字典结构的存储服务器</li>
+<li>多个字典，对应关系型数据库的不同database</li>
+<li>单线程</li>
+</ul>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul>
+<li><p>启动、结束</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">redis-server #启动redis
+redid-cli shutdown #关闭Redis
+redis-cli #Redis命令行工具<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
+<li><p>全局命令</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">dbsize #获取redis中全部key的数量
+keys * #获取全部key
+ping 
+echo
+config set #设置Redis配置信息
+config get * #获取Redis配置信息
+select 1 #选择第一个数据库，Redis默认有16个，集群默认使用第一个（0号数据库）且只有一个<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2></li>
+</ul>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><ul>
+<li>定义<ul>
+<li>最大512M</li>
+</ul>
+</li>
+<li>命令<ul>
+<li>取值赋值<br><code>set</code><br><code>Mset</code><br><code>get</code><br><code>Mget</code></li>
+</ul>
+</li>
+<li>增加整数<br><code>incr</code><br><code>incrBy</code><br><code>incrByFloat</code><br><code>decr</code><br><code>decrBy</code></li>
+<li>位操作<br><code>getBit</code><br><code>setBit</code><br><code>bitCount</code><br><code>bitOp</code><br><code>bitPos</code></li>
+<li>其他<br><code>exists</code><br><code>del</code><br><code>strLen</code><br><code>append</code>(追加)</li>
+</ul>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><ul>
+<li><p>定义</p>
+<ul>
+<li>字符串列表</li>
+<li>基于双向链表</li>
+<li>有序、不唯一</li>
+<li>最多2^32 -1 头尾时间复杂度是O(1)</li>
+</ul>
+</li>
+<li><p>应用</p>
+<ul>
+<li>新鲜事</li>
+<li>日志</li>
+<li>队列</li>
+</ul>
+</li>
+<li><p>命令</p>
+<ul>
+<li>取值赋值<ul>
+<li>两端增加<br><code>LPUSH key ele[eles...]</code><br><code>rpush</code></li>
+<li>两端弹出<br><code>LPOP key [count]</code><br><code>rpop</code></li>
+<li>根据索引<br><code>LINDEX key index</code>(获取索引处值)<br><code>LSET key index ele</code>(修改索引处值)<br><code>RpopLpush source target</code>(转移元素)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>片段</p>
+<ul>
+<li>获取片段<br><code>lrange 0 -1</code>(索引从0开始、正数从左边，负数从右边)</li>
+<li>保留片段<ul>
+<li><code>trim 0 -1</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>删除指定值<br><code>LREM key count value</code></p>
+<pre><code>  - count &gt; 0
+      - 从左边开始删除count个value
+  - count &lt; 0
+      - 从右边开始删除count的绝对值个value
+  - count = 0
+      - 删除全部的value
+</code></pre>
+</li>
+<li><p>其他</p>
+<ul>
+<li><code>llen</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><ul>
+<li>定义<ul>
+<li>基于值为空的hash表</li>
+<li>无序、唯一</li>
+<li>最多2^32 -1</li>
+<li>时间复杂度是O(1)<ul>
+<li>因为hash</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>命令<ul>
+<li>取值赋值<br><code>sadd</code><br><code>srem</code><br><code>smembers</code><br><code>SrandMember key count</code><br>count &gt; 0 获取不重复的元素 count &lt; 0 可能获取重复的元素<br><code>spop</code><br>随机移除</li>
+<li>集合计算<ul>
+<li>差集<br><code>sdiff</code><br><code>sdiffstore</code></li>
+<li>交集<br><code>sinter</code><br><code>sinterstore</code></li>
+<li>并集<br><code>sunion</code><br><code>sunionstore</code></li>
+</ul>
+</li>
+<li>其他<br><code>sismember</code>(是否存在)<br><code>scard</code>(数量)</li>
+</ul>
+</li>
+</ul>
+<h3 id="ZSet"><a href="#ZSet" class="headerlink" title="ZSet"></a>ZSet</h3><ul>
+<li><p>定义</p>
+<ul>
+<li>基于哈希表和跳跃表</li>
+<li>有序、唯一</li>
+<li>关联一个分数权值，按从大到小排序</li>
+<li>和List相比<ul>
+<li>同<ul>
+<li>都是有序的</li>
+<li>都可以获取片段</li>
+</ul>
+</li>
+<li>异<ul>
+<li>List基于链表，中级数据获取慢，ZSet获取每个位置都一样</li>
+<li>List不能调整某个元素的位置，ZSet可以（通过调整分数）</li>
+<li>ZSet更费内存</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>命令</p>
+<ul>
+<li><p>取值赋值<br><code>zadd</code><br><code>zRem</code>(删除一个或多个)<br><code>zRemRangeByRank key starts stop</code>(按照排名范围删除)<br><code>zRemRangeByScore key starts stop</code>(按照分数范围删除)</p>
+</li>
+<li><p>获取片段</p>
+<ul>
+<li><code>ZRANGE key min max [withscores]</code><br>根据排名返回<code>[min,max]</code>之间的元素 分数相同按字典顺序 从小到大</li>
+<li><code>ZrevRANGE key min max [withscores]</code><br>根据排名返回<code>[min,max]</code>之间的元素 从大到小</li>
+<li>zRangeByScore key min max limit offset count 根据分数返回<code>[min,max]</code>之间的元素，支持偏移 从小到大</li>
+<li>zRevRangeByScore key min max limit offset count 根据分数返回<code>[min,max]</code>之间的元素，支持偏移 从大到小</li>
+</ul>
+</li>
+<li><p>参数</p>
+<ul>
+<li>负无穷(-inf)</li>
+<li>正无穷(inf)</li>
+<li>不包含(()</li>
+</ul>
+</li>
+<li><p>分数<br><code>zadd key score member</code>(修改分数)<br><code>zscore key member(</code>获取分数)<br><code>zIncrBy key increment member</code>(修改分数)<br>increment &gt; 0 增加 increment &lt; 0 减少</p>
+</li>
+<li><p>集合计算</p>
+<ul>
+<li>差集<br><code>zDiff</code><br><code>zDiffStore</code></li>
+<li>交集<br><code>zInterStore</code></li>
+<li>并集<br><code>zUnionStore</code></li>
+</ul>
+</li>
+<li><p>其他</p>
+<ul>
+<li>sismember(是否存在)</li>
+<li>zRank(获取元素排名、分数最小为 0)</li>
+<li>zRevRank(获取元素排名、分数最大为 0)</li>
+<li>数量<ul>
+<li>zCard</li>
+<li>zCount(获取指定范围的元素数量)</li>
+<li>zLexCount</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h3><ul>
+<li>定义<ul>
+<li>最多2^32 -1</li>
+</ul>
+</li>
+<li>命令（针对字段）<ul>
+<li>取值赋值<br><code>hset</code><br><code>Mhset</code><br><code>hget</code><br><code>Mhget</code><br><code>hgetAll</code><br><code>hsetNX</code><br>存在不执行操作 不存在= hset<br><code>hexists</code><br><code>hdel</code></li>
+<li>增加整数<br><code>hincrby</code></li>
+<li>只获取key、value<br><code>hkeys</code><br><code>hvals</code></li>
+<li>其他<br><code>hlen</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h3><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><ul>
+<li>好处<ul>
+<li>保证原子性</li>
+<li>保证顺序性</li>
+</ul>
+</li>
+<li>错误处理<ul>
+<li>语法错误<ul>
+<li>全部不执行</li>
+</ul>
+</li>
+<li>运行错误<ul>
+<li>正确的执行，错误的不执行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>命令<br><code>multi</code><br><code>exec</code><br><code>watch</code><br><code>unWatch</code></li>
+</ul>
+<h3 id="过期时间"><a href="#过期时间" class="headerlink" title="过期时间"></a>过期时间</h3><ul>
+<li>命令<ul>
+<li>设置过期时间<ul>
+<li>expire key second</li>
+<li>pExpire key milliSecond</li>
+<li>expireAt key timestap</li>
+<li>pExpireAt key millisecond-timestap</li>
+</ul>
+</li>
+<li>清除过期时间<ul>
+<li>persist</li>
+<li>set</li>
+<li>getset</li>
+</ul>
+</li>
+<li>ttl<ul>
+<li>【Time To Live】生存时间</li>
+<li>-1永不过期</li>
+<li>-2键不存在</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缓存系统<ul>
+<li>key过期时间不好确定<ul>
+<li>时间长-浪费内存</li>
+<li>时间短-命中率低</li>
+</ul>
+</li>
+<li>设置最大内存</li>
+<li>内存淘汰策略<ul>
+<li>LRU<ul>
+<li>【List Recently Used】最近最少使用<ul>
+<li>随机取<code>maxmemory-samples</code>个，删除最少使用的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>volatile-LRU<ul>
+<li>使用LRU删除设置了ttl的键</li>
+</ul>
+</li>
+<li>allkeys-LRU<ul>
+<li>使用LRU删除全部键</li>
+</ul>
+</li>
+<li>volatile-random<ul>
+<li>随机删除设置了ttl的键</li>
+</ul>
+</li>
+<li>allkeys-random<ul>
+<li>随机删除全部键</li>
+</ul>
+</li>
+<li>volatile-TTL<ul>
+<li>删除ttl最近的一个键<ul>
+<li>随机取<code>maxmemory-samples</code>个，删除ttl最近的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>noEviction<ul>
+<li>不删除键，只返回错误</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul>
+<li>sort<ul>
+<li>alpha<ul>
+<li>默认转为double类型来排序</li>
+</ul>
+</li>
+<li>desc<ul>
+<li>倒序</li>
+</ul>
+</li>
+<li>limit<ul>
+<li>返回指定个数</li>
+</ul>
+</li>
+<li>by<ul>
+<li><code>SORT tag:ruby:posts BY post:*-&gt;time</code></li>
+<li>使用<code>tag:ruby:posts</code>的值替换 *，获取对应hash的time值进行排序</li>
+</ul>
+</li>
+<li>get<ul>
+<li>get # 返回元素本身的值</li>
+</ul>
+</li>
+<li>store<ul>
+<li>保存后的键类型为List</li>
+<li>通常结合 expire 缓存</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>性能优化<ul>
+<li>时间复杂度<ul>
+<li>O(n + mlog(m))</li>
+<li>n为需要排序的元素个数</li>
+<li>m为需要返回的元素个数</li>
+</ul>
+</li>
+<li>n尽可能小</li>
+<li>m尽可能小</li>
+<li>大数据量排序，记得缓存</li>
+</ul>
+</li>
+</ul>
+<h3 id="消息通知"><a href="#消息通知" class="headerlink" title="消息通知"></a>消息通知</h3><ul>
+<li>消息队列<ul>
+<li>生产者<ul>
+<li>把消息存入队列</li>
+</ul>
+</li>
+<li>消费者<ul>
+<li>从队列中获取消息消费</li>
+</ul>
+</li>
+<li>好处<ul>
+<li>解耦合</li>
+<li>降覆载</li>
+</ul>
+</li>
+<li>队列<ul>
+<li>普通队列<ul>
+<li>Lpush</li>
+<li>Rpop</li>
+</ul>
+</li>
+<li>优先级队列<ul>
+<li><code>bRpop key [key...] timeout</code><ul>
+<li>优先监控key1，如果没有返回后面的key2，key3中的值，如意有先返回key1中的值</li>
+<li>如果没有值会阻塞timeou时间，0表示一直阻塞</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>发布\订阅<ul>
+<li>publish</li>
+<li>subscribe<ul>
+<li>unSubscribe</li>
+</ul>
+</li>
+<li>pSubscribe<ul>
+<li>pUnSubscribe<ul>
+<li>按照规则订阅</li>
+<li>取消订阅是正则表达式必须完全匹配</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="管道"><a href="#管道" class="headerlink" title="管道"></a>管道</h3><ul>
+<li>批量执行相互不依赖的命令</li>
+</ul>
+<h3 id="节省空间"><a href="#节省空间" class="headerlink" title="节省空间"></a>节省空间</h3><ul>
+<li>精简键名和键值</li>
+<li>内部编码优化<ul>
+<li>String<ul>
+<li>REDIS_ENCODING_RAW<ul>
+<li>rwa</li>
+</ul>
+</li>
+<li>REDIS_ENCODING_INT<ul>
+<li>int</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>List<ul>
+<li>REDIS_ENCODING_ZIPLIST<ul>
+<li>zipList</li>
+</ul>
+</li>
+<li>REDIS_ENCODING_LINKEDLIST<ul>
+<li>linkedList</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Set<ul>
+<li>REDIS_ENCODING_HT<ul>
+<li>hashTable</li>
+</ul>
+</li>
+<li>REDIS_ENCODING_INTSET<ul>
+<li>intSet</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ZSet<ul>
+<li>REDIS_ENCODING_SKIPLIST<ul>
+<li>skipList</li>
+</ul>
+</li>
+<li>REDIS_ENCODING_ZIPLIST<ul>
+<li>zipList</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hash<ul>
+<li>REDIS_ENCODING_EMBSTR<ul>
+<li>embStr</li>
+</ul>
+</li>
+<li>REDIS_ENCODING_HT<ul>
+<li>hashTable</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><ul>
+<li>符合条件时，将内存中的全部快照到硬盘<ul>
+<li>根据配置规则自动快照<ul>
+<li>每当M时间修改了大于N个键时快照<ul>
+<li>save 900 1</li>
+<li>900s内修改了大于1个键时快照</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行SAVE、BGSAVE命令<ul>
+<li>SAVE会阻塞所有来自客户端的请求</li>
+<li>BGSAVE异步进行快照<ul>
+<li>通过lastSave查看上次快照时间</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行FLUSHALL命令<ul>
+<li>依赖于自动快照条件<ul>
+<li>只要自动快照条件不为空，flushall就会快照</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>执行复制（replication）时<ul>
+<li>没有定义自动快照条件也会快照</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>原理<ul>
+<li>从当前进程（父进程）fork一份到子进程</li>
+<li>父进程继续接受命令，子进程开始保存到磁盘的临时文件</li>
+<li>子进程写完后，替换上次生成的dump.rdb文件</li>
+<li>新的.rdb文件保存的是执行fork命令是的数据</li>
+</ul>
+</li>
+<li>如果异常退出，会丢失最后一次快照之后修改的数据</li>
+</ul>
+<h3 id="AOF-append-only-file"><a href="#AOF-append-only-file" class="headerlink" title="AOF(append only file)"></a>AOF(append only file)</h3><ul>
+<li>将redis执行的每一条命令保存到硬盘</li>
+<li>为了避免冗余，满足一定条件会自动重写AOF文件<ul>
+<li>自动重写<ul>
+<li>auto-aof-rewrite-percentage<ul>
+<li>达到之前AOF文件的百分之多少重写</li>
+</ul>
+</li>
+<li>auto-aof-rewrite-min-size<ul>
+<li>允许重写的最小AOF文件大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>手动重写<ul>
+<li>bgRemWriteAOF</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需要跳过系统的磁盘缓存机制，写入AOF后主动从磁盘缓存同步硬盘<ul>
+<li>appendFSync<ul>
+<li>always<ul>
+<li>每次写入都同步</li>
+</ul>
+</li>
+<li>everySec<ul>
+<li>每秒执行一次同步</li>
+</ul>
+</li>
+<li>no<ul>
+<li>不跳过</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>区别</li>
+<li>AOF载入速度慢<ul>
+<li>重新执行AOF中保存的命令</li>
+</ul>
+</li>
+</ul>
+<h2 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h2><h3 id="复制"><a href="#复制" class="headerlink" title="复制"></a>复制</h3><ul>
+<li>主数据库</li>
+<li>从数据库<ul>
+<li>一般是只读的</li>
+<li>从数据库也可以有从数据库</li>
+</ul>
+</li>
+<li>乐观复制<ul>
+<li>需要一定时间内主从不一致</li>
+<li>原理（复制初始化）<ul>
+<li>从数据库启动，向主数据库发送sync同步请求</li>
+<li>主数据库接收到sync请求后，执行RDB持久化操作，同时缓存快照期间的命令<ul>
+<li>快照完成后，发送给从数据库</li>
+</ul>
+</li>
+<li>从数据库接收后，载入快照，执行收到的缓存的命令</li>
+</ul>
+</li>
+<li>优点<ul>
+<li>读写分离<ul>
+<li>主数据库写</li>
+<li>从数据库读</li>
+</ul>
+</li>
+<li>持久化<ul>
+<li>主数据库关闭持久化</li>
+<li>从数据库来持久化</li>
+<li>故障<ul>
+<li>主数据库故障<ul>
+<li>提升从数据库为主数据库</li>
+<li>重启数据库，并设置为从数据库</li>
+<li>禁止自动重启<ul>
+<li>因为主数据库没有开启持久化，会清空全部数据，然后导致从数据库数据也清空</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>从数据库故障<ul>
+<li>自动同步主数据库数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>即使关闭主数据库的RDB快照，执行【复制初始化】依然会生成RDB文件<ul>
+<li>主数据下次启动会读取RDB文件，因为复制时间不确定，所以数据不确定</li>
+<li>硬盘性能瓶颈</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无硬盘复制<ul>
+<li>不持久化读写硬盘，之间通过网络发送个从数据库</li>
+</ul>
+</li>
+<li>增量复制<ul>
+<li>断线重连</li>
+<li>原理<ul>
+<li>基础<ul>
+<li>从数据库保存主数据的run ID</li>
+<li>复制同步阶段，主数据库把每一个传给从数据的命令保存到一个【积压队列】，同时记录命令偏移范围</li>
+<li>复制同步阶段，从数据库接收命令时，保存命令偏移量</li>
+</ul>
+</li>
+<li>实现<ul>
+<li>从数据发送同步请求命令<ul>
+<li>PSync 主数据ID 命令偏移量</li>
+</ul>
+</li>
+<li>主数据库判断ID是否一致</li>
+<li>主数据库判断命令偏移量是否在【积压队列】<ul>
+<li>在，增量复制</li>
+<li>不在，全量复制</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="哨兵"><a href="#哨兵" class="headerlink" title="哨兵"></a>哨兵</h3><ul>
+<li>独立的进程<ul>
+<li>监控主从数据库是否正常运行</li>
+<li>主数据出现故障，自动将从数据库提升为主数据库</li>
+<li>监控其他哨兵</li>
+<li>和数据库建立两个连接<ul>
+<li>一个订阅数据库的哨兵频道</li>
+<li>一个用来发送命令</li>
+</ul>
+</li>
+<li>和哨兵建立一个连接<ul>
+<li>发送PING命令</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>操作<ul>
+<li>每 10s 向主从数据库发送INFO信息<ul>
+<li>第一次，解析INFO，获取当前数据库信息</li>
+<li>之后，向已知的数据库发送INFO，解析IFNO，更新数据库信息</li>
+</ul>
+</li>
+<li>每 2s 向从数据库哨兵频道发送自身信息<ul>
+<li>与其他哨兵同分享信息</li>
+</ul>
+</li>
+<li>每 1s 向主从数据库和其他哨兵发送PING信息<ul>
+<li>判断是否下线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>工作<ul>
+<li>判断下线<ul>
+<li>主观下线<ul>
+<li>一个哨兵发现了主数据库下线<ul>
+<li>向其他哨兵发送请求是否发现主数据库下线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>客观下线<ul>
+<li>超过quorum的哨兵发现主数据库下线</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>选举领头哨兵<ul>
+<li>Raft算法<ul>
+<li>第一个发现下线的哨兵A要求其他哨兵选自己为领头哨兵</li>
+<li>其他哨兵如果没有选过其他哨兵，则选A为领头哨兵</li>
+<li>如果有半数并且&gt; quorum的哨兵选择A，则A成为领头哨兵</li>
+<li>如果没有选成功，等待一个随机时间重新选</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>选取主数据库<ul>
+<li>选择优先级最高的</li>
+<li>同优先级选择命令偏移量最大的</li>
+<li>优先级、命令偏移量一样，选择ID最小的</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>部署<ul>
+<li>每个节点设置一个哨兵</li>
+<li>设置quorum = N /2 +1<ul>
+<li>N为哨兵数量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="集群-1"><a href="#集群-1" class="headerlink" title="集群"></a>集群</h3><ul>
+<li>默认使用 0号数据库，且不能切换</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Redis/">
+                                    <span class="chip bg-color">Redis</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/14/rabbitmq/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="RabbitMQ笔记">
+                        
+                        <span class="card-title">RabbitMQ笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            RabbitMQ笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/be/" class="post-category">
+                                    be
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MQ/">
+                        <span class="chip bg-color">MQ</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/26/mac-init/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Mac装机指南">
+                        
+                        <span class="card-title">Mac装机指南</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Mac装机指南
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/tool/" class="post-category">
+                                    tool
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Apple/">
+                        <span class="chip bg-color">Apple</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!--<script>-->
+<!--    (() => {-->
+<!--        var update = Date.parse("2021-03-11"),-->
+<!--            date = new Date(),-->
+<!--            now = date.getTime(),-->
+<!--            expire = now - update,-->
+<!--            expire_days = Math.floor(expire/(24*3600*1000));-->
+<!--        if (expire_days >= 120) {-->
+<!--            document.querySelectorAll('#expire-date')[0].innerHTML = expire_days;-->
+<!--            document.querySelectorAll('#post-expired-notify')[0].style.display = 'block';-->
+<!--        }-->
+<!--    })();-->
+<!--</script>-->
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Implicated</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

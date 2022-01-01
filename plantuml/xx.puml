@@ -1,0 +1,30 @@
+@startuml
+!define Table(name,desc) class name as "desc" << (T,#FFAAAA) >>
+!define Info(name) class name << (I,#8CEA00) >>
+!define column_type(x) <color:green>x</color>
+!define column_is_not_null(x) <color:blue>x</color>
+!define column_default_val(x) <color:hotpink>x</color>
+!define column(x) <b>x</b>
+hide methods
+hide stereotypes
+Info(Note){
+    -Primary key
+    +index
+    <b>Column name</b>
+    <color:green>Data type</color>
+    <color:hotpink>Default value</color>
+    <color:blue>Is Null</color>
+    Comment
+}
+
+Table(pe_area, "pe_area  (省份)") {
+    -{field} column(id) column_type(int(11)) column_default_val( Null) column_is_not_null(Not Null)
+    +{field} column(code) column_type(varchar(10)) column_default_val( Null) column_is_not_null(Not Null) 地区名称
+    +{field} column(name) column_type(varchar(10)) column_default_val( Null) column_is_not_null(Not Null) 地区编码
+    {field} column(pinyin_name) column_type(varchar(20)) column_default_val( Null) column_is_not_null(Not Null) 汉语拼音
+    {field} column(create_time) column_type(datetime) column_default_val( Null) column_is_not_null(Not Null) 创建时间
+    {field} column(update_time) column_type(datetime) column_default_val( Null)  column_is_not_null(Null) 更新时间
+    {field} column(is_delete) column_type(tinyint(2)) column_default_val(0) column_is_not_null(Not Null) 是否删除
+}
+
+@enduml

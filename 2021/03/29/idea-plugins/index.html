@@ -1,0 +1,1971 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="jetbrains插件, Implicated">
+    <meta name="description" content="Implicated">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>jetbrains插件 | Implicated</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.svg" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Implicated</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/fe">
+          
+          <i class="fab fa-node-js" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>前端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/be">
+          
+          <i class="fab fa-java" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>后端</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/database">
+          
+          <i class="fas fa-database" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>数据库</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/ops">
+          
+          <i class="fab fa-linux" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>运维</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/apple">
+          
+          <i class="fas fa-apple" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>苹果</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/tool">
+          
+          <i class="fas fa-tools" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>工具</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/plan" class="waves-effect waves-light">
+      
+      <i class="fas fa-plane" style="zoom: 0.6;"></i>
+      
+      <span>计划</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.svg" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Implicated</div>
+        <div class="logo-desc">
+            
+            Implicated
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/fe " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-node-js" style="position: absolute;left:50px" ></i>
+			      
+		          <span>前端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/be " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-java" style="position: absolute;left:50px" ></i>
+			      
+		          <span>后端</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/database " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-database" style="position: absolute;left:50px" ></i>
+			      
+		          <span>数据库</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/ops " style="margin-left:75px">
+				  
+				   <i class="fa fab fa-linux" style="position: absolute;left:50px" ></i>
+			      
+		          <span>运维</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/apple " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-apple" style="position: absolute;left:50px" ></i>
+			      
+		          <span>苹果</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/tool " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tools" style="position: absolute;left:50px" ></i>
+			      
+		          <span>工具</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/plan" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-plane"></i>
+			
+			计划
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">jetbrains插件</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/IDEA/">
+                                <span class="chip bg-color">IDEA</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/tool/" class="post-category">
+                                tool
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-29
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-30
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+<!--        <div>-->
+<!--            <p>-->
+<!--                本文最后更新于 &lt;span id=&#34;expire-date&#34;&gt;&lt;/span&gt; 天前，文中部分描述可能已经过时。-->
+<!--            </p>-->
+<!--        </div>-->
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>jetbrains全家桶适用</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h2><h3 id="Common"><a href="#Common" class="headerlink" title="Common"></a>Common</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">用途</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Atom Material Icons</td>
+<td align="left">文件图标</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">CodeGlance2</td>
+<td align="left">代码地图</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IDE Eval Reset</td>
+<td align="left">试用重置</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://plugins.zhile.io/">Crack</a></td>
+</tr>
+<tr>
+<td align="left">Key Promoter X</td>
+<td align="left">快捷键提示</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">One Dark Native</td>
+<td align="left">暗色主题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Rainbow Brackets</td>
+<td align="left">彩虹括号</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">String manipulation</td>
+<td align="left">字符串工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">ToolSet</td>
+<td align="left">工具集合</td>
+<td align="left">Paid</td>
+</tr>
+<tr>
+<td align="left">any-rule</td>
+<td align="left">正则表达式</td>
+<td align="left">alt + a</td>
+</tr>
+<tr>
+<td align="left">git commit template</td>
+<td align="left">git模板</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">用途</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Alibaba Java Coding Guidelines</td>
+<td align="left">代码规范</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">GenerateAllSetter</td>
+<td align="left">get、set方法生成</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Grep Console</td>
+<td align="left">颜色日志</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JRebel and XRebel for IntelliJ</td>
+<td align="left">热部署</td>
+<td align="left"><a target="_blank" rel="noopener" href="http://blog.lanyus.com/archives/317.html">Crack</a><a target="_blank" rel="noopener" href="https://jrebel.qekang.com/">Crack</a></td>
+</tr>
+<tr>
+<td align="left">JRebel mybatisPlus extension</td>
+<td align="left">mybatis mapper热部署</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">MyBatis Log Plugin</td>
+<td align="left">SQL日志拼接</td>
+<td align="left">Paid</td>
+</tr>
+<tr>
+<td align="left">MyBatisX</td>
+<td align="left">xml、mapper跳转</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">RestfulTool</td>
+<td align="left">接口查询</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">SequenceDiagram</td>
+<td align="left">时序图</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">maven helper</td>
+<td align="left">maven增强工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">easy Javadoc</td>
+<td align="left">Java Doc</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h3 id="DataGrip"><a href="#DataGrip" class="headerlink" title="DataGrip"></a>DataGrip</h3><hr>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">用途</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Chinese (Simplified) Language Pack</td>
+<td align="left">中文语言包</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">FTP/SFTP Connectivity</td>
+<td align="left">代替XShell</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">http client</td>
+<td align="left">代替postman</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="IDEA插件精简"><a href="#IDEA插件精简" class="headerlink" title="IDEA插件精简"></a>IDEA插件精简</h2><p>根据自己情况精简</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">名称</th>
+<th align="left">用途</th>
+<th align="left">是否必须启用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Android</td>
+<td align="left">Android</td>
+<td align="left">安卓支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Android</td>
+<td align="left">Smali support</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Build Tools</td>
+<td align="left">Ant</td>
+<td align="left">Java构建工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Build Tools</td>
+<td align="left">Gradle</td>
+<td align="left">Java构建工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Build Tools</td>
+<td align="left">Gradle Extension</td>
+<td align="left">Java构建工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Build Tools</td>
+<td align="left">Maven</td>
+<td align="left">Java构建工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Build Tools</td>
+<td align="left">Maven Extension</td>
+<td align="left">Java构建工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Code Coverage</td>
+<td align="left">Code Coverage for Java</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Code Coverage</td>
+<td align="left">Emma</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Database</td>
+<td align="left">Database Tools and SQL</td>
+<td align="left">DataGrip精简版</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">Docker</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">FTP/SFTP Connectivity</td>
+<td align="left">SSH工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">Glassfish</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">Jetty</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">Tomcat and TomEE</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">WebLogic</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">WebSphere</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Deployment</td>
+<td align="left">WildFly</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">HTML and XML</td>
+<td align="left">Html Tools</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">HTML and XML</td>
+<td align="left">Refactor-X</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">HTML and XML</td>
+<td align="left">XSLT Debugger</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">HTML and XML</td>
+<td align="left">XpathView + XSLT</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IDE Settings</td>
+<td align="left">IDE Settings Sync</td>
+<td align="left">使用JetBrains帐号同步idea设置</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">IDE Settings</td>
+<td align="left">Settings Repository</td>
+<td align="left">使用仓库同步idea设置</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">Angular and AngularJS</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">Coffee Script</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">JavaScript Debugger</td>
+<td align="left">JS Debugger工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">JavaScript Intention Power Pack</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">JavaScript and TypeScript</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">NodeJS</td>
+<td align="left">NodeJS支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">Spy-js</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JavaScript Frameworks and Tools</td>
+<td align="left">Tslint</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Arquillian</td>
+<td align="left">增加了对Arquillian（Java微服务的测试框架）的支持。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">AspectJ</td>
+<td align="left">AspectJ静态代理</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Drools</td>
+<td align="left">规则引擎</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Grails</td>
+<td align="left">一个强大的基于Groovy的Web应用程序框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Guice</td>
+<td align="left">Google提供给您的Java 6及更高版本的轻量级依赖注入框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Helidon</td>
+<td align="left">Oracle在2018年9月推出的轻量级微服务框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Hibernate</td>
+<td align="left">一个CRM框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE Platform-images</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Applications Servers</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Batch Applications</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Bean Validation</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Enterprise Java Bean(EJB)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Message Service(JMS)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Persistence(JPA)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: RESTful Web Services(JAX-RS)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Server Faces (JSF)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Web Services(JAX-WS)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: Web/Servlets</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java EE: WebSocket</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java HTTP Clients</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Java SQL Libraries</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">JavaFX</td>
+<td align="left">JavaFX脚本支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Micronaut</td>
+<td align="left">Micronaut 是一个现代化的基于 JVM 的全栈框架，用于构建模块化且易于测试的微服务或无服务程序</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Quarkus</td>
+<td align="left">Red Hat开源的Java框架Quarkus，定位为GraalVM和OpenJDK HotSpot量身定制的一个Kurbernetes Native Java框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Reactive Streams</td>
+<td align="left">反应式流，一个Java异步框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Batch</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Boot</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Data</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Integration Patterns</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Messaging</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring MVC</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring OSGi</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Security</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Web Flow</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring Web Services</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">JVM Frameworks</td>
+<td align="left">Spring WebSocket</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Gherkin</td>
+<td align="left">Cucumber脚本语言</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Groovy</td>
+<td align="left">脚本语言</td>
+<td align="left">✓</td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Markdown</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Properties</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Resource Bundle Editor</td>
+<td align="left">.properties编译器</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Shell Script</td>
+<td align="left">shell脚本支持增强</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Languages</td>
+<td align="left">Yaml</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Plugin Development</td>
+<td align="left">Devkit</td>
+<td align="left">IDEA插件开发插件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Style Sheets</td>
+<td align="left">CSS</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Style Sheets</td>
+<td align="left">Less</td>
+<td align="left">CSS预处理语言</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Style Sheets</td>
+<td align="left">Sass</td>
+<td align="left">CSS预处理语言</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Style Sheets</td>
+<td align="left">Stylus</td>
+<td align="left">CSS预处理语言</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Style Sheets</td>
+<td align="left">W3C Validators</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Swing</td>
+<td align="left">UI Designer</td>
+<td align="left">一个Java的GUI工具包</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Template Languages</td>
+<td align="left">FreeMarker</td>
+<td align="left">Apache FreeMarker™是一个模板引擎</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Template Languages</td>
+<td align="left">Haml</td>
+<td align="left">HTML抽象标记语言</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Template Languages</td>
+<td align="left">Java Server Pages(jsp)</td>
+<td align="left">JSP模板</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Template Languages</td>
+<td align="left">Thymeleaf</td>
+<td align="left">Thymeleaf模板引擎</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Template Languages</td>
+<td align="left">Velocity</td>
+<td align="left">Velocity模板引擎</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Test Tools</td>
+<td align="left">Cucumber for Groovy</td>
+<td align="left">Cucumber<a target="_blank" rel="noopener" href="https://cucumber.io/">支持行为驱动开发的软件工具</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Test Tools</td>
+<td align="left">Cucumber for Java</td>
+<td align="left">Cucumber<a target="_blank" rel="noopener" href="https://cucumber.io/">支持行为驱动开发的软件工具</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Test Tools</td>
+<td align="left">Junit</td>
+<td align="left">支持Junit测试框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Test Tools</td>
+<td align="left">TestNG</td>
+<td align="left">支持TestNG测试框架</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Themes</td>
+<td align="left">Windows 10 Light Theme</td>
+<td align="left">Windows 10明亮主题</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Tools Integration</td>
+<td align="left">Lombok</td>
+<td align="left">消除getter、setter</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">ChangeReminder</td>
+<td align="left">根据提交历史记录来预测您可能忘记修改的文件。支持Git</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">Github</td>
+<td align="left">Github支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">Git</td>
+<td align="left">Git支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">Mercurial</td>
+<td align="left">跨平台的分布式版本控制软件，主要由Python语言实现，但也包含用C语言实现的二进制比较工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">Perforce Helix Core</td>
+<td align="left">支持二进制文件或图形的集中式版本控制系统</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Version Controls</td>
+<td align="left">Subversion</td>
+<td align="left">SVN支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">ByteCode Viewer</td>
+<td align="left">字节码查看器（支持已编译的，target目录 View-&gt;Show Bytecode）</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Code With Me</td>
+<td align="left">团队协作工具</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Copyright</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://blog.csdn.net/ab84120966/article/details/90239450">版权信息插件</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Debugger Support for JSP(Jsr45)</td>
+<td align="left">JSP debug支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Dependency Structure Matrix</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Diagrams</td>
+<td align="left">UML类图支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Eclipse Interoperability</td>
+<td align="left">Eclipse相互支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">EditorConfig</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://editorconfig.org/#overview">跨IDE的统一编码风格支持</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Grazie</td>
+<td align="left">智能拼写和语法检查</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Http Clients</td>
+<td align="left">类型postman</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">IDE Features Trainer</td>
+<td align="left">IDEA基本功能学习</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">IntelliLang</td>
+<td align="left">语言注入功能</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Java Bytecode Decompiler</td>
+<td align="left">Java反编译</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Java Internationalization</td>
+<td align="left">Java国际化支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Java Stream Debugger</td>
+<td align="left">streamAPI debug支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Kotlin</td>
+<td align="left">Kotlin语言支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Machine Learning Code Completion</td>
+<td align="left">基于机器学习优化代码提示</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Next File Prediction</td>
+<td align="left">预测将在IDE中打开的下一个文件，以开始长期运行的分析和预加载缓存。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">OpenAPI Specifications</td>
+<td align="left">OpenAPI和Swagger规范文件支持。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Performance Testing</td>
+<td align="left">基于Gradle，自动化测试</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Project Shared Indexing</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/shared-indexes.html#shared-jdk-indexes">共享索引</a></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Recommenders for Java and Python</td>
+<td align="left">Java 和 Python的上下文提示增强</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Space</td>
+<td align="left">项目管理工具（包含 CI/CD 工具 TeamCity）</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Tasks Management</td>
+<td align="left">任务功能插件</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Terminal</td>
+<td align="left">终端</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Textmate Bundles</td>
+<td align="left">代码高亮</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Time Tracking</td>
+<td align="left">任务功能插件的时间跟踪</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Webp Support</td>
+<td align="left">.webp图片格式支持</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Other Tools</td>
+<td align="left">Zkm-Unscramble</td>
+<td align="left">解密Zelix KlassMaster加密的堆栈跟踪。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/IDEA/">
+                                    <span class="chip bg-color">IDEA</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/30/maven/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="maven笔记">
+                        
+                        <span class="card-title">maven笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            maven笔记
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/be/" class="post-category">
+                                    be
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/Maven/">
+                        <span class="chip bg-color">Maven</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/15/interview/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="面试问题">
+                        
+                        <span class="card-title">面试问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            自己觉得比较好的面试问题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/be/" class="post-category">
+                                    be
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                    <a href="/tags/MQ/">
+                        <span class="chip bg-color">MQ</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!--<script>-->
+<!--    (() => {-->
+<!--        var update = Date.parse("2021-03-30"),-->
+<!--            date = new Date(),-->
+<!--            now = date.getTime(),-->
+<!--            expire = now - update,-->
+<!--            expire_days = Math.floor(expire/(24*3600*1000));-->
+<!--        if (expire_days >= 120) {-->
+<!--            document.querySelectorAll('#expire-date')[0].innerHTML = expire_days;-->
+<!--            document.querySelectorAll('#post-expired-notify')[0].style.display = 'block';-->
+<!--        }-->
+<!--    })();-->
+<!--</script>-->
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">Implicated</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+    
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
